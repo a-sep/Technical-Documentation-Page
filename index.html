@@ -17,11 +17,12 @@
                 <h1>React - Introducing JSX</h1>
             </header>
             <ul>
-                <li><a href="#Introducing_JSX">Introduction</a></li>
-                <li><a href="#Why_JSX?">Why JSX?</a></li>
-                <li><a href="#Embedding_Expressions_in_JSX">Embedding Expressions in JSX</a></li>
-                <li><a href="#JSX_is_an_Expression_Too">JSX is an Expression Too</a></li>
-                <li><a href="#Specifying_Attributes_with_JSX">Specifying Attributes with JSX</a></li>
+                <li><a class="nav-link" href="#Introducing_JSX">Introducing JSX</a></li>
+                <li><a class="nav-link" href="#Why_JSX?">Why JSX?</a></li>
+                <li><a class="nav-link" href="#Embedding_Expressions_in_JSX">Embedding Expressions in JSX</a></li>
+                <li><a class="nav-link" href="#JSX_is_an_Expression_Too">JSX is an Expression Too</a></li>
+                <li><a class="nav-link" href="#Specifying_Attributes_with_JSX">Specifying Attributes with JSX</a></li>
+                <li><a class="nav-link" href="#Benefits_of_React">Benefits of React</a></li>
             </ul>
 
         </nav>
@@ -33,9 +34,10 @@
                 <header>
                     <h2>Introducing JSX</h2>
                 </header>
-                <p>Consider this variable declaration:</p>
+                <p class="light-font">Consider this variable declaration:</p>
                 <pre>
                         <code>
+
                                 const element = &lth1&gtHello, world!&lt/h1&gt;
                         </code>
                 </pre>
@@ -73,6 +75,7 @@
                     curly braces:</p>
                 <pre>
                     <code>
+                       
                         const name = 'Josh Perez';
                         const element = &lth1&gtHello, {name}&lt/h1&gt;
                         
@@ -87,7 +90,9 @@
                 <p>In the example below, we embed the result of calling a JavaScript function, formatName(user), into
                     an &lt;h1&gt; element</p>
                 <pre>
-                    <code>function formatName(user) {
+                    <code>
+                        
+                        function formatName(user) {
                                 return user.firstName + ' ' + user.lastName;
                               }
                               
@@ -116,16 +121,63 @@
                 <header>
                     <h2>JSX is an Expression Too</h2>
                 </header>
-                <p></p>
-                <code></code>
+                <p>After compilation, JSX expressions become regular JavaScript function calls and evaluate to
+                    JavaScript objects.</p>
+                <p>This means that you can use JSX inside of if statements and for loops, assign it to variables,
+                    accept it as arguments, and return it from functions:</p>
+                <pre>
+                        <code>
+                            
+                                function getGreeting(user) {
+                                    if (user) {
+                                      return &lth1&gtHello, {formatName(user)}!&lt/h1&gt;
+                                    }
+                                    return &lth1&gtHello, Stranger.&lt/h1&gt;
+                                  }
+                        </code>
+                    </pre>
             </section>
 
             <section id="Specifying_Attributes_with_JSX" class="main-section">
                 <header>
                     <h2>Specifying Attributes with JSX</h2>
                 </header>
-                <p></p>
-                <code></code>
+                <p>You may use quotes to specify string literals as attributes:</p>
+                <pre>
+                    <code>
+
+                            const element = &ltdiv tabIndex="0"&gt&lt/div&gt;
+                    </code>
+                </pre>
+                <p>You may also use curly braces to embed a JavaScript expression in an attribute:</p>
+                <pre>
+                    <code>
+
+                        const element = &ltimg src={user.avatarUrl}&gt&lt/img&gt;
+                    </code>
+                </pre>
+                <p>Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You
+                    should either use quotes (for string values) or curly braces (for expressions), but not both in the
+                    same attribute.</p>
+                <blockquote>
+                    <p><strong>Warning:</strong></p>
+                    <p>Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming
+                        convention instead of HTML attribute names.</p>
+                    <p>For example, class becomes className in JSX, and tabindex becomes tabIndex.</p>
+                </blockquote>
+            </section>
+            <section id="Benefits_of_React" class="main-section">
+                <header>
+                    <h2>Benefits of React</h2>
+                </header><span> ...over the other competitive technologies or frameworks.</span>
+                <ul>
+                    <li>Simplicity</li>
+                    <li>Easy to learn</li>
+                    <li>Native Approach</li>
+                    <li>Data Binding</li>
+                    <li>Performance</li>
+                </ul>
+                <p>Go to <a href="https://reactjs.org/docs/getting-started.html">reactjs</a> homepage to learn more.</p>
             </section>
         </main>
 
