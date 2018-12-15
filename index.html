@@ -27,8 +27,6 @@
 
         </nav>
 
-
-
         <main id="main-doc">
             <section id="Introducing_JSX" class="main-section">
                 <header>
@@ -187,7 +185,6 @@
 
 
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
     <footer>
         <div>
@@ -200,6 +197,20 @@
 
         </div>
     </footer>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+
+    <script>
+        let ul_container = document.querySelector('#navbar > ul');
+        ul_container.addEventListener('click', (e) => {
+
+            let active = document.getElementsByClassName('nav-active')
+            if (active.length > 0) active[0].classList.remove('nav-active')
+
+            e.target.parentNode.classList.add('nav-active');
+        });
+    </script>
 
 </body>
 
