@@ -4,16 +4,23 @@ body{
 }
 #side-wrapper{
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-    grid-template-columns: minmax(200px, 1fr) minmax(450px, 3fr) ;
+    grid-template-columns: minmax(300px,1fr) minmax(450px, 3fr) ;
     grid-gap: 1rem;
 }
 
 
 #navbar{
+    position: fixed;
+    top: 0;
+    width: 300px;
+    height: 100vh;
     background-color: #F7F7F7;
     padding-top: 1rem;
+    padding-left: 1rem;
+
 }
+
+
 #navbar a {
     padding: 0.6rem ;
     text-decoration: none;
@@ -72,10 +79,18 @@ blockquote{
 }
 
 
-
-
-@media (max-width: 600px){
+@media (max-width: 900px){
     #side-wrapper{
         grid-template-columns: 1fr;
+    }
+
+    #navbar{
+        height: 33vh;
+        width: 97vw;
+        overflow: scroll;
+    }
+
+    #main-doc{
+        margin-top: 33vh;
     }
 }
