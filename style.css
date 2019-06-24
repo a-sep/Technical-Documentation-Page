@@ -2,12 +2,6 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
 }
-#side-wrapper{
-    display: grid;
-    grid-template-columns: minmax(300px,1fr) minmax(450px, 3fr) ;
-    grid-gap: 1rem;
-}
-
 
 #navbar{
     position: fixed;
@@ -19,8 +13,6 @@ body{
     padding-left: 1rem;
 
 }
-
-
 #navbar a {
     padding: 0.6rem ;
     text-decoration: none;
@@ -37,8 +29,6 @@ body{
 header{
     color: #282C34; 
 }
-
-
 #navbar ul{
     list-style-type: none;
     padding: 0;
@@ -57,7 +47,6 @@ header{
 
 #main-doc{
     padding: 1rem;
-
 }
 pre{
     background-color: #282C34;
@@ -80,17 +69,19 @@ blockquote{
 
 
 @media (max-width: 900px){
-    #side-wrapper{
-        grid-template-columns: 1fr;
-    }
-
     #navbar{
-        height: 33vh;
+        height: 30vh;
         width: 97vw;
         overflow: scroll;
     }
 
     #main-doc{
-        margin-top: 33vh;
+        margin-top: 30vh;
+    }
+}
+
+@media (min-width: 900px){
+    #main-doc{
+        margin-left: 310px;
     }
 }
