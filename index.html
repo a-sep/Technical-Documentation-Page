@@ -33,10 +33,10 @@
                 </header>
                 <p class="light-font">Consider this variable declaration:</p>
                 <pre>
-                        <code>
+<code>
 
-                                const element = &lth1&gtHello, world!&lt/h1&gt;
-                        </code>
+    const element = &lth1&gtHello, world!&lt/h1&gt;
+</code>
                 </pre>
 
                 <p>This funny tag syntax is neither a string nor HTML.</p>
@@ -71,44 +71,44 @@
                 <p>In the example below, we declare a variable called name and then use it inside JSX by wrapping it in
                     curly braces:</p>
                 <pre>
-                    <code>
-                       
-                        const name = 'Josh Perez';
-                        const element = &lth1&gtHello, {name}&lt/h1&gt;
-                        
-                        ReactDOM.render(
-                            element,
-                            document.getElementById('root')
-                            );
-                    </code>
+<code>
+    
+    const name = 'Josh Perez';
+    const element = &lth1&gtHello, {name}&lt/h1&gt;
+    
+    ReactDOM.render(
+        element,
+        document.getElementById('root')
+        );
+</code>
                 </pre>
                 <p>You can put any valid JavaScript expression inside the curly braces in JSX. For example, 2 + 2,
                     user.firstName, or formatName(user) are all valid JavaScript expressions.</p>
                 <p>In the example below, we embed the result of calling a JavaScript function, formatName(user), into
                     an &lt;h1&gt; element</p>
                 <pre>
-                    <code>
-                        
-                        function formatName(user) {
-                                return user.firstName + ' ' + user.lastName;
-                              }
-                              
-                              const user = {
-                                firstName: 'Harper',
-                                lastName: 'Perez'
-                              };
-                              
-                              const element = (
-                                &lth1&gt
-                                  Hello, {formatName(user)}!
-                                &lt/h1&gt
-                              );
-                              
-                              ReactDOM.render(
-                                element,
-                                document.getElementById('root')
-                              );
-                    </code>
+<code>
+    
+    function formatName(user) {
+            return user.firstName + ' ' + user.lastName;
+            }
+            
+            const user = {
+            firstName: 'Harper',
+            lastName: 'Perez'
+            };
+            
+            const element = (
+            &lth1&gt
+                Hello, {formatName(user)}!
+            &lt/h1&gt
+            );
+            
+            ReactDOM.render(
+            element,
+            document.getElementById('root')
+            );
+</code>
                 </pre>
                 <p>We split JSX over multiple lines for readability. While it isn’t required, when doing this, we also
                     recommend wrapping it in parentheses to avoid the pitfalls of automatic semicolon insertion.</p>
@@ -123,15 +123,15 @@
                 <p>This means that you can use JSX inside of if statements and for loops, assign it to variables,
                     accept it as arguments, and return it from functions:</p>
                 <pre>
-                        <code>
-                            
-                                function getGreeting(user) {
-                                    if (user) {
-                                      return &lth1&gtHello, {formatName(user)}!&lt/h1&gt;
-                                    }
-                                    return &lth1&gtHello, Stranger.&lt/h1&gt;
-                                  }
-                        </code>
+<code>
+    
+    function getGreeting(user) {
+        if (user) {
+            return &lth1&gtHello, {formatName(user)}!&lt/h1&gt;
+        }
+        return &lth1&gtHello, Stranger.&lt/h1&gt;
+    }
+</code>
                     </pre>
             </section>
 
@@ -141,17 +141,17 @@
                 </header>
                 <p>You may use quotes to specify string literals as attributes:</p>
                 <pre>
-                    <code>
+<code>
 
-                            const element = &ltdiv tabIndex="0"&gt&lt/div&gt;
-                    </code>
+    const element = &ltdiv tabIndex="0"&gt&lt/div&gt;
+</code>
                 </pre>
                 <p>You may also use curly braces to embed a JavaScript expression in an attribute:</p>
                 <pre>
-                    <code>
+<code>
 
-                        const element = &ltimg src={user.avatarUrl}&gt&lt/img&gt;
-                    </code>
+    const element = &ltimg src={user.avatarUrl}&gt&lt/img&gt;
+</code>
                 </pre>
                 <p>Don’t put quotes around curly braces when embedding a JavaScript expression in an attribute. You
                     should either use quotes (for string values) or curly braces (for expressions), but not both in the
